@@ -34,7 +34,7 @@ TIME g "[4] 更新至 2022.07.07 编译的 R22.7.7  5.15.52"
 echo
 TIME g "[5] 更新至 2022.08.05 编译的 R22.8.2  5.15.59 Cpu:19388"
 echo
-TIME r "[0] 说啥也不好使了，继续做【钉子户】退出更新"
+TIME r "[0] 退出更新"
 echo
 read -p " 输入 序号 然后 敲回车确认 请输入您的选择： " CHOOSE
 case $CHOOSE in
@@ -185,7 +185,7 @@ break
 ;;
 0)
 echo
-TIME r "您选择了 [0] 继续做【钉子户】退出本次更新"
+TIME r "已退出本次更新"
 echo
 exit 0
 break
