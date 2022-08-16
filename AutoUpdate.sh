@@ -22,17 +22,17 @@ while :; do
 echo
 TIME g "------- 路由 在线升级降级更新 菜单 --------"
 echo
-TIME r "温馨提示:理论上保存配置可以随意升降各版本!"
+TIME r "温馨提示:保存配置可以随意升降各版本!"
 echo
-TIME g "[1] 更新至 2022.05.23 编译的 R22.5.5 5.15.41"
+TIME g "[1] 更新至 2022.05.23 编译的 R22.5.5  5.15.41"
 echo
 TIME g "[2] 更新至 2022.06.19 编译的 R22.6.16 5.15.48"
 echo
 TIME g "[3] 更新至 2022.06.27 编译的 R22.6.16 5.15.50"
 echo
-TIME g "[4] 更新至 2022.07.07 编译的 R22.7.7  5.15.52 +1"
+TIME g "[4] 更新至 2022.07.07 编译的 R22.7.7  5.15.52"
 echo
-TIME g "[5] 更新至 2022.08.05 编译的 R22.8.2  5.15.59 CpuMark : 19388"
+TIME g "[5] 更新至 2022.08.05 编译的 R22.8.2  5.15.59 Cpu:19388"
 echo
 TIME r "[0] 说啥也不好使了，继续做【钉子户】退出更新"
 echo
@@ -45,7 +45,7 @@ TIME g "1.同步编译源码库到固件更新当天 "
 TIME g "2.固件版本更新 R22.5.5 内核更新 5.15.41"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://hm333999.cf/openwrtn1/20220523/Phicomm-N1_OP-R22.5.5_5.15.41.tar.xz
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.5.5_5.15.41.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
@@ -74,7 +74,7 @@ TIME g "1.同步编译源码库到固件更新当天 "
 TIME g "2.固件版本更新 R22.6.16 内核更新 5.15.48"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://hm333999.cf/openwrtn1/20220619/Phicomm-N1_OP-R22.6.16_5.15.48.tar.xz
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.6.16_5.15.48.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
@@ -103,7 +103,7 @@ TIME g "1.同步编译源码库到固件更新当天 "
 TIME g "2.固件版本更新 R22.6.16 内核更新 5.15.50"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://hm333999.cf/openwrtn1/20220627/Phicomm-N1_OP-R22.6.16_5.15.50.tar.xz
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.6.16_5.15.50.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
@@ -132,7 +132,7 @@ TIME g "1.同步编译源码库到固件更新当天 "
 TIME g "2.固件版本更新 R22.7.7 内核更新 5.15.52"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://hm333999.cf/openwrtn1/20220707/Phicomm-N1_OP-R22.7.7_5.15.52.tar.xz
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.7.7_5.15.52.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
@@ -161,7 +161,7 @@ TIME g "1.同步编译源码库到固件更新当天 "
 TIME g "2.固件版本更新 R22.8.2 内核更新 5.15.59"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://hm333999.cf/openwrtn1/20220805/Phicomm-N1_OP-R22.8.2_5.15.59.tar.xz
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.8.2_5.15.59.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
