@@ -458,13 +458,13 @@ echo
 echo "创建 etc 子卷 ..."
 btrfs subvolume create etc
 echo -n "创建文件夹 ... "
-mkdir -p .snapshots .reserved bin boot dev lib opt mnt overlay proc rom root run sbin sys tmp usr www
+mkdir -p .snapshots .reserved bin boot dev lib mnt overlay proc rom root run sbin sys tmp usr www
 ln -sf lib/ lib64
 ln -sf tmp/ var
 echo "完成"
 echo
 
-COPY_SRC="root etc bin sbin lib opt usr www"
+COPY_SRC="root etc bin sbin lib usr www"
 echo "复制数据 ... "
 for src in $COPY_SRC;do
     echo -n "复制 $src ... "
@@ -512,8 +512,8 @@ EOF
 echo "创建初始 etc 快照 -> .snapshots/etc-000"
 btrfs subvolume snapshot -r etc .snapshots/etc-000
 
-[ -d ${SHFS}/docker ] || mkdir -p ${SHFS}/docker
-rm -rf opt/docker && ln -sf ${SHFS}/docker/ opt/docker
+#[ -d ${SHFS}/docker ] || mkdir -p ${SHFS}/docker
+#rm -rf opt/docker && ln -sf ${SHFS}/docker/ opt/docker
 
 if [ -f /mnt/${NEW_ROOT_NAME}/etc/config/AdGuardHome ];then
     [ -d ${SHFS}/AdGuardHome/data ] || mkdir -p ${SHFS}/AdGuardHome/data
