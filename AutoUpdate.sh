@@ -34,6 +34,8 @@ TIME g "[4] 更新至 2022.07.07 编译的 R22.7.7  5.15.52 Cpu:19377"
 echo
 TIME g "[5] 更新至 2022.08.05 编译的 R22.8.2  5.15.59 Cpu:19388"
 echo
+TIME g "[6] 更新至 2022.09.16 编译的 R22.9.1 5.15.67"
+echo
 TIME r "[0] 退出更新"
 echo
 read -p " 输入 序号 然后 敲回车确认 请输入您的选择： " CHOOSE
@@ -162,6 +164,35 @@ TIME g "2.固件版本更新 R22.8.2 内核更新 5.15.59"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
 url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.8.2_5.15.59.tar.xz
+if [ -f "/etc/update.sh" ]; then
+cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
+else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
+cd /mnt/mmcblk2p4
+curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+fi
+if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
+mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
+sed -i 's/s905d/Phicomm/g' /etc/openwrt-release            #修改 SOC
+sed -i 's/n1/N1/g' /etc/openwrt-release                    #修改 BOARD
+fi    
+echo
+TIME g "================================ 下载固件中 =================================="
+curl -LO $url/$Firmware
+TIME g "===============================下载完成,解压中==============================="
+tar -xvJf *tar.xz && rm -f *.tar.xz
+TIME r "============================解压完成,开始升级固件============================"
+chmod 755 update.sh
+bash update.sh *.img
+break
+;;
+6)
+echo
+TIME g "【2022.09.16 更新日志】"
+TIME g "1.同步编译源码库到固件更新当天 "
+TIME g "2.固件版本更新至 2022.09.16 编译的 R22.9.1 5.15.67"
+cd /mnt/mmcblk2p4
+rm -rf *.sh Phicomm-N1_*
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.9.1_5.15.67.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
