@@ -1,5 +1,5 @@
 # Firmware online update command
 
 ````bash 
-bash <(curl -Ls https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/AutoUpdate.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/hm-Private/OpenWrt/main/AutoUpdate.sh)
 ````
