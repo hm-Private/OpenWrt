@@ -4,7 +4,7 @@ function menu()
 {
 cat <<EOF
 `echo`
- --gd772 N1固件 更新菜单--
+ --N1固件 更新菜单--
 
 `echo -e "\033[32m 1. 更新 5.10 系固件 \033[0m"`
 
