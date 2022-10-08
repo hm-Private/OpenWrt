@@ -254,7 +254,7 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本更新 2022.09.16 编译的 R22.9.1 5.15.67"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.9.1_5.15.67.tar.xz
+url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.9.1_5.15.67.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
