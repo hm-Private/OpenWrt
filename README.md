@@ -7,5 +7,5 @@ bash <(curl -Ls https://raw.githubusercontent.com/hm-Private/OpenWrt/main/AutoUp
 # Firmware online update command新
 
 ````bash 
-bash <(curl -Ls https://raw.githubusercontent.com/hm-Private/OpenWrt/main/AutoUpdates.sh)
+bash <(curl -Ls https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/AutoUpdates.sh)
 ````
