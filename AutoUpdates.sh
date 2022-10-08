@@ -54,7 +54,7 @@ if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://drive.smayun.xyz/d/update/update.sh
+curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
