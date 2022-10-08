@@ -49,12 +49,12 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本 R22.9.1 内核更新 5.10.142"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.02/Phicomm-N1_OP-R22.9.1_5.10.142.tar.xz
+url=https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@releases/download/v0.0.02/Phicomm-N1_OP-R22.9.1_5.10.142.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+curl -LO https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
@@ -109,12 +109,12 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本更新 R22.5.5 内核更新 5.15.41"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.5.5_5.15.41.tar.xz
+url=https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@releases/download/v0.0.0.1/Phicomm-N1_OP-R22.5.5_5.15.41.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+curl -LO https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
@@ -138,12 +138,12 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本更新 R22.6.16 内核更新 5.15.48"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.6.16_5.15.48.tar.xz
+url=https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@releases/download/v0.0.0.1/Phicomm-N1_OP-R22.6.16_5.15.48.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+curl -LO https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
@@ -167,12 +167,12 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本更新 R22.6.16 内核更新 5.15.50"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.6.16_5.15.50.tar.xz
+url=https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@releases/download/v0.0.0.1/Phicomm-N1_OP-R22.6.16_5.15.50.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+curl -LO https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
@@ -196,12 +196,12 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本更新 R22.7.7 内核更新 5.15.52"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.7.7_5.15.52.tar.xz
+url=https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@releases/download/v0.0.0.1/Phicomm-N1_OP-R22.7.7_5.15.52.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+curl -LO https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
@@ -225,12 +225,12 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本更新 R22.8.2 内核更新 5.15.59"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.8.2_5.15.59.tar.xz
+url=https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@releases/download/v0.0.0.1/Phicomm-N1_OP-R22.8.2_5.15.59.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+curl -LO https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
@@ -254,12 +254,12 @@ echo -e "1.同步编译源码库到固件发布当天"
 echo -e "2.固件版本更新 2022.09.16 编译的 R22.9.1 5.15.67"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
-url=https://download.fastgit.org/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.9.1_5.15.67.tar.xz
+url=https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@releases/download/v0.0.0.1/Phicomm-N1_OP-R22.9.1_5.15.67.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
 cd /mnt/mmcblk2p4
-curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+curl -LO https://cdn.jsdelivr.net/gh/hm-Private/OpenWrt@main/update.sh
 fi
 if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
 mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
