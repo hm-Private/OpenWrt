@@ -47,6 +47,8 @@ cat<<EOF
 
 `echo -e "\033[32m 6. 更新至 2022.09.16 编译的 R22.9.1  5.10.142 Cpu:19615 \033[0m"`
 
+`echo -e "\033[32m 7. 更新至 2022.10.23 编译的 R22.10.10 5.10.148 \033[0m"`
+
 0. 不更了 退出本次更新
 
 EOF
@@ -226,6 +228,35 @@ chmod 755 update.sh
 bash update.sh *.img
 break
 ;;
+7)
+echo
+echo -e "【2022.10.23 更新日志】"
+echo -e "1.同步编译源码库到固件发布当天"
+echo -e "2.固件版本 18.06 R22.10.10 内核更新 5.10.148"
+cd /mnt/mmcblk2p4
+rm -rf *.sh Phicomm-N1_*
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.02/Phicomm-N1_OP-R22.10.10_5.10.148.tar.xz
+if [ -f "/etc/update.sh" ]; then
+cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
+else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
+cd /mnt/mmcblk2p4
+curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+fi
+if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
+mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
+sed -i 's/s905d/Phicomm/g' /etc/openwrt-release            #修改 SOC
+sed -i 's/n1/N1/g' /etc/openwrt-release                    #修改 BOARD
+fi    
+echo
+echo -e "================================ 下载固件中 ==================================="
+curl -LO $url
+echo -e "===============================下载完成,解压中 ================================"
+tar -xvJf *tar.xz && rm -f *.tar.xz
+echo -e "============================解压完成,开始升级固件============================="
+chmod 755 update.sh
+bash update.sh *.img
+break
+;;
 0)
 exit 0
 ;;
@@ -251,6 +282,8 @@ cat<<EOF
 `echo -e "\033[32m 5. 更新至 2022.08.05 编译的 R22.8.2  5.15.59 Cpu:19388 \033[0m"`
 
 `echo -e "\033[32m 6. 更新至 2022.09.16 编译的 R22.9.1  5.15.67 Cpu:19631\033[0m"`
+
+`echo -e "\033[32m 7. 更新至 2022.10.23 编译的 R22.10.10 5.15.74 \033[0m"`
 
 0. 不更了 退出更新
 
@@ -410,6 +443,35 @@ echo -e "2.固件版本更新 2022.09.16 编译的 R22.9.1 5.15.67"
 cd /mnt/mmcblk2p4
 rm -rf *.sh Phicomm-N1_*
 url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.9.1_5.15.67.tar.xz
+if [ -f "/etc/update.sh" ]; then
+cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
+else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
+cd /mnt/mmcblk2p4
+curl -LO https://raw.githubusercontent.com/hm-Private/OpenWrt/main/update.sh
+fi
+if [ -f "/etc/flippy-openwrt-release" ]; then              #判断 flippy-openwrt-release 文件是否存在
+mv -f /etc/flippy-openwrt-release /etc/openwrt-release     #存在 则改名为 openwrt-release
+sed -i 's/s905d/Phicomm/g' /etc/openwrt-release            #修改 SOC
+sed -i 's/n1/N1/g' /etc/openwrt-release                    #修改 BOARD
+fi    
+echo
+echo -e "================================ 下载固件中 ==================================="
+curl -LO $url
+echo -e "===============================下载完成,解压中 ================================"
+tar -xvJf *tar.xz && rm -f *.tar.xz
+echo -e "============================解压完成,开始升级固件============================="
+chmod 755 update.sh
+bash update.sh *.img
+break
+;;
+7)
+echo
+echo -e "【2022.10.23 更新日志】"
+echo -e "1.同步编译源码库到固件发布当天"
+echo -e "2.固件版本 18.06 R22.10.10 内核更新 5.15.74"
+cd /mnt/mmcblk2p4
+rm -rf *.sh Phicomm-N1_*
+url=https://github.com/hm-Private/OpenWrt/releases/download/v0.0.0.1/Phicomm-N1_OP-R22.10.10_5.15.74.tar.xz
 if [ -f "/etc/update.sh" ]; then
 cp -r /etc/update.sh /mnt/mmcblk2p4                        #升级脚本 存在 则复制到mmcblk2p4录目
 else                                                       #升级脚本 不存在 则下载到mmcblk2p4目录
