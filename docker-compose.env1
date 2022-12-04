@@ -1,0 +1,9 @@
+# 内网IP
+MEDIASOUP_IP=38.34.253.244
+# 公网IP
+MEDIASOUP_ANNOUNCED_IP=38.34.253.244
+
+# swag相关
+URL=hmstnt.gq
+SUBDOMAINS=
+TZ=Asia/Shanghai
